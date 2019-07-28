@@ -17,6 +17,8 @@
 		01DA81D422ED265D00AACB34 /* ViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81D322ED265D00AACB34 /* ViewExtention.swift */; };
 		01DA81D622ED267700AACB34 /* ViewExtentionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81D522ED267700AACB34 /* ViewExtentionProtocol.swift */; };
 		01DA81D822ED278900AACB34 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81D722ED278900AACB34 /* ColorTheme.swift */; };
+		01DA81DA22ED28E600AACB34 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81D922ED28E600AACB34 /* Album.swift */; };
+		01DA81DC22ED29B900AACB34 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81DB22ED29B900AACB34 /* AlbumModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		01DA81D322ED265D00AACB34 /* ViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtention.swift; sourceTree = "<group>"; };
 		01DA81D522ED267700AACB34 /* ViewExtentionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtentionProtocol.swift; sourceTree = "<group>"; };
 		01DA81D722ED278900AACB34 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		01DA81D922ED28E600AACB34 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		01DA81DB22ED29B900AACB34 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 		01DA81C522ED18F200AACB34 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01DA81D922ED28E600AACB34 /* Album.swift */,
+				01DA81DB22ED29B900AACB34 /* AlbumModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,9 +282,11 @@
 				01DA81A622ED111600AACB34 /* AppDelegate.swift in Sources */,
 				01DA81D822ED278900AACB34 /* ColorTheme.swift in Sources */,
 				01DA81CC22ED1A6700AACB34 /* AlbumListTableViewController.swift in Sources */,
+				01DA81DC22ED29B900AACB34 /* AlbumModel.swift in Sources */,
 				01DA81D222ED213000AACB34 /* AlbumTableViewCell.swift in Sources */,
 				01DA81D422ED265D00AACB34 /* ViewExtention.swift in Sources */,
 				01DA81D622ED267700AACB34 /* ViewExtentionProtocol.swift in Sources */,
+				01DA81DA22ED28E600AACB34 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
