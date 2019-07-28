@@ -12,8 +12,13 @@ class MainNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .red
+        setUpUi()
+    }
+    
+    // MARK: - Private 
+    
+    private func setUpUi() {
+       navigationBar.prefersLargeTitles = true
     }
 
 }

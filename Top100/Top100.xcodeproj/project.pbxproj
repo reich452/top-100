@@ -13,6 +13,7 @@
 		01DA81BB22ED111700AACB34 /* Top100Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81BA22ED111700AACB34 /* Top100Tests.swift */; };
 		01DA81CC22ED1A6700AACB34 /* AlbumListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81CB22ED1A6700AACB34 /* AlbumListTableViewController.swift */; };
 		01DA81CE22ED1C9C00AACB34 /* MainNavigatonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81CD22ED1C9C00AACB34 /* MainNavigatonController.swift */; };
+		01DA81D222ED213000AACB34 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81D122ED213000AACB34 /* AlbumTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		01DA81BC22ED111700AACB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01DA81CB22ED1A6700AACB34 /* AlbumListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListTableViewController.swift; sourceTree = "<group>"; };
 		01DA81CD22ED1C9C00AACB34 /* MainNavigatonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainNavigatonController.swift; path = Top100/MainNavigatonController.swift; sourceTree = SOURCE_ROOT; };
+		01DA81D122ED213000AACB34 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				01DA81C922ED19AA00AACB34 /* Networking */,
 				01DA81C822ED197B00AACB34 /* ViewController */,
 				01DA81C722ED195600AACB34 /* View */,
+				01DA81D022ED20F800AACB34 /* Cell */,
 				01DA81C622ED194000AACB34 /* ModelController */,
 				01DA81C522ED18F200AACB34 /* Model */,
 				01DA81A522ED111600AACB34 /* AppDelegate.swift */,
@@ -150,6 +153,14 @@
 			children = (
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		01DA81D022ED20F800AACB34 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				01DA81D122ED213000AACB34 /* AlbumTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 				01DA81CE22ED1C9C00AACB34 /* MainNavigatonController.swift in Sources */,
 				01DA81A622ED111600AACB34 /* AppDelegate.swift in Sources */,
 				01DA81CC22ED1A6700AACB34 /* AlbumListTableViewController.swift in Sources */,
+				01DA81D222ED213000AACB34 /* AlbumTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

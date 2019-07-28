@@ -9,26 +9,38 @@
 import UIKit
 
 class AlbumListTableViewController: UITableViewController {
+    
+    // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "albumCellId")
+        setUpUi()
+    }
+    
+    // MARK: - UI
+    
+    func setUpUi() {
         self.view.backgroundColor = .green
-
+        self.title = "Top 100"
     }
 
-    // MARK: - Table view data source
+}
 
+extension AlbumListTableViewController {
+    // MARK: - Table view data source
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return 5
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "albumCellId", for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
+        
+        cell.textLabel?.text = "Wow"
         
         return cell
     }
     
-
 }
