@@ -14,7 +14,7 @@ class AlbumListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "albumCellId")
+        tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: Constant.albumCellId)
         setUpUi()
     }
     var albums = [
@@ -45,7 +45,7 @@ extension AlbumListTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "albumCellId", for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.albumCellId, for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
        
         let album = albums[indexPath.row]
         cell.cellImage = #imageLiteral(resourceName: "xceImagePlaceholder")
