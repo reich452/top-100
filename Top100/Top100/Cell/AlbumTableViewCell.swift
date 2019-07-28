@@ -18,9 +18,10 @@ class AlbumTableViewCell: UITableViewCell {
             artistLabel.text = album?.artist
         }
     }
-    var cellImage: UIImage? {
+    var artworkPath: String? {
         didSet {
-            artworkImageView.image = #imageLiteral(resourceName: "xceImagePlaceholder")
+            guard let album = album else { return }
+            artworkImageView.loadImage(imagePath: album.artworkUrl)
         }
     }
     
@@ -39,6 +40,8 @@ class AlbumTableViewCell: UITableViewCell {
         label.textColor = UIColor.semiboldWhite
         label.numberOfLines = 0
         label.textAlignment = .left
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.6
         return label
     }()
     

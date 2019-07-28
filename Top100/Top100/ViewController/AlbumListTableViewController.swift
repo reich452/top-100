@@ -19,6 +19,7 @@ class AlbumListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: Constant.albumCellId)
+        tableView.prefetchDataSource = self 
         setUpUi()
         fetchAlbums()
     }
@@ -79,8 +80,21 @@ extension AlbumListTableViewController {
         
         let album = albums[indexPath.row]
         cell.album = album
-        
+        cell.artworkPath = album.artworkUrl
         return cell
     }
     
+}
+
+extension AlbumListTableViewController: UITableViewDataSourcePrefetching {
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        
+        for indxPath in indexPaths {
+            let album = self.albums[indxPath.row]
+            guard let url = URL(string: album.artworkUrl) else { return }
+            print("-- Prefetcing Artist: \(album.artist) at row \(indxPath.row)")
+            URLSession.shared.dataTask(with: url).resume()
+        }
+    }
 }
