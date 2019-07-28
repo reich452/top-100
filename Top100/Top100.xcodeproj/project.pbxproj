@@ -21,6 +21,8 @@
 		01DA81DC22ED29B900AACB34 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81DB22ED29B900AACB34 /* AlbumModel.swift */; };
 		01DA81DE22ED383700AACB34 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81DD22ED383700AACB34 /* Constant.swift */; };
 		01DA81E022ED3CFA00AACB34 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81DF22ED3CFA00AACB34 /* NetworkManager.swift */; };
+		01DA81E222ED3DDD00AACB34 /* AlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81E122ED3DDD00AACB34 /* AlbumController.swift */; };
+		01DA81E422ED3F9200AACB34 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81E322ED3F9200AACB34 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		01DA81DB22ED29B900AACB34 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		01DA81DD22ED383700AACB34 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		01DA81DF22ED3CFA00AACB34 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		01DA81E122ED3DDD00AACB34 /* AlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumController.swift; sourceTree = "<group>"; };
+		01DA81E322ED3F9200AACB34 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		01DA81C622ED194000AACB34 /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				01DA81E122ED3DDD00AACB34 /* AlbumController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			children = (
 				01DA81D522ED267700AACB34 /* ViewExtentionProtocol.swift */,
 				01DA81DD22ED383700AACB34 /* Constant.swift */,
+				01DA81E322ED3F9200AACB34 /* NetworkError.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -285,9 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01DA81E022ED3CFA00AACB34 /* NetworkManager.swift in Sources */,
+				01DA81E222ED3DDD00AACB34 /* AlbumController.swift in Sources */,
 				01DA81CE22ED1C9C00AACB34 /* MainNavigatonController.swift in Sources */,
 				01DA81A622ED111600AACB34 /* AppDelegate.swift in Sources */,
 				01DA81D822ED278900AACB34 /* ColorTheme.swift in Sources */,
+				01DA81E422ED3F9200AACB34 /* NetworkError.swift in Sources */,
 				01DA81CC22ED1A6700AACB34 /* AlbumListTableViewController.swift in Sources */,
 				01DA81DC22ED29B900AACB34 /* AlbumModel.swift in Sources */,
 				01DA81D222ED213000AACB34 /* AlbumTableViewCell.swift in Sources */,
