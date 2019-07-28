@@ -8,10 +8,20 @@
 
 import Foundation
 
-struct AlbumModel: Album {
+struct JsonDictionary: Decodable {
+    
+    let feed: FeedJson
+    
+    struct FeedJson: Decodable {
+        
+        let results: [AlbumModel]
+        
+    }
+}
+struct AlbumModel: Decodable, Album {
     
     var name: String
     var artits: String
     var artWorkUrl: String
-    
 }
+
