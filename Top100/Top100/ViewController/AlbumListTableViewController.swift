@@ -22,7 +22,7 @@ class AlbumListTableViewController: UITableViewController {
         setUpUi()
         fetchAlbums()
     }
-
+    
     
     // MARK: - UI
     
@@ -33,6 +33,7 @@ class AlbumListTableViewController: UITableViewController {
     }
     
     func fetchAlbums() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         albumController.fetchTopAlbums { [weak self] (result) in
             guard let self = self else { return }
             switch result {
@@ -40,10 +41,14 @@ class AlbumListTableViewController: UITableViewController {
                 self.albums = albums
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                      UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 }
                 
             case .failure(let error):
-                print("-- Error Fetching \(error)")
+                DispatchQueue.main.async {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.showNoActionAlert(titleStr: "Error Displaying Albums", messageStr: error.localizedDescription, style: .cancel)
+                }
             }
         }
     }
@@ -71,9 +76,8 @@ extension AlbumListTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.albumCellId, for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
-       
+        
         let album = albums[indexPath.row]
-        cell.cellImage = #imageLiteral(resourceName: "xceImagePlaceholder")
         cell.album = album
         
         return cell

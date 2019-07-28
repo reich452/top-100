@@ -17,7 +17,7 @@ struct AlbumController {
     func fetchTopAlbums(completion: @escaping (AlbumCompletion)) {
         let requetUrl = url.appendingPathExtension("json")
         
-        NetworkManager.performRequest(for: requetUrl, httpMethod: .get, urlParameters: nil, body: nil) { (data, error) in
+        NetworkManager.performRequest(for: requetUrl, httpMethod: .get) { (data, error) in
             
             if let error = error {
                 print("Error performing Network Request \(error) \(#file) \(#function)")
