@@ -20,6 +20,7 @@
 		01DA81DA22ED28E600AACB34 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81D922ED28E600AACB34 /* Album.swift */; };
 		01DA81DC22ED29B900AACB34 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81DB22ED29B900AACB34 /* AlbumModel.swift */; };
 		01DA81DE22ED383700AACB34 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81DD22ED383700AACB34 /* Constant.swift */; };
+		01DA81E022ED3CFA00AACB34 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81DF22ED3CFA00AACB34 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		01DA81D922ED28E600AACB34 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		01DA81DB22ED29B900AACB34 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		01DA81DD22ED383700AACB34 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		01DA81DF22ED3CFA00AACB34 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		01DA81C922ED19AA00AACB34 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				01DA81DF22ED3CFA00AACB34 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DA81E022ED3CFA00AACB34 /* NetworkManager.swift in Sources */,
 				01DA81CE22ED1C9C00AACB34 /* MainNavigatonController.swift in Sources */,
 				01DA81A622ED111600AACB34 /* AppDelegate.swift in Sources */,
 				01DA81D822ED278900AACB34 /* ColorTheme.swift in Sources */,
