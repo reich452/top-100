@@ -10,20 +10,19 @@ import UIKit
 
 class AlbumListTableViewController: UITableViewController {
     
+    // MARK: - Properties
+    let albumController: AlbumController
+    fileprivate var albums = [Album]()
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: Constant.albumCellId)
         setUpUi()
+        fetchAlbums()
     }
-    var albums = [
-        AlbumModel(name: "The Search", artits: "NF", artWorkUrl: ""),
-        AlbumModel(name: "Hadestown (Original Brodway Cast)", artits: "Anais Mitchel", artWorkUrl: ""),
-        AlbumModel(name: "Late Niights and Longnetcks", artits: "Justin More", artWorkUrl: ""),
-        AlbumModel(name: "One Light Town", artits: "Casey Donahew", artWorkUrl: ""),
-        AlbumModel(name: "Blink-182", artits: "Tom Delong", artWorkUrl: "")
-    ]
+
     
     // MARK: - UI
     
@@ -31,7 +30,33 @@ class AlbumListTableViewController: UITableViewController {
         view.backgroundColor = .mainColor
         title = "Top 100"
         tableView.separatorStyle = .none
-        
+    }
+    
+    func fetchAlbums() {
+        albumController.fetchTopAlbums { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let albums):
+                self.albums = albums
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            case .failure(let error):
+                print("-- Error Fetching \(error)")
+            }
+        }
+    }
+    
+    // MARK: - Init
+    
+    init(albumController: AlbumController) {
+        self.albumController = albumController
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }

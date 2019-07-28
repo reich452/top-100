@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct JsonDictionary: Decodable {
+struct AlbumJson: Decodable {
     
     let feed: FeedJson
     
@@ -21,7 +21,13 @@ struct JsonDictionary: Decodable {
 struct AlbumModel: Decodable, Album {
     
     var name: String
-    var artits: String
-    var artWorkUrl: String
+    var artist: String
+    var artworkUrl: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case artist = "artistName"
+        case artworkUrl = "artworkUrl100"
+    }
 }
 

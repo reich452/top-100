@@ -15,7 +15,7 @@ class AlbumTableViewCell: UITableViewCell {
     var album: Album? {
         didSet {
             nameLabel.text = album?.name
-            artistLabel.text = album?.artits
+            artistLabel.text = album?.artist
         }
     }
     var cellImage: UIImage? {
