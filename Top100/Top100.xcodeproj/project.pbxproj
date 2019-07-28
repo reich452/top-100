@@ -14,6 +14,8 @@
 		01DA81CC22ED1A6700AACB34 /* AlbumListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81CB22ED1A6700AACB34 /* AlbumListTableViewController.swift */; };
 		01DA81CE22ED1C9C00AACB34 /* MainNavigatonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81CD22ED1C9C00AACB34 /* MainNavigatonController.swift */; };
 		01DA81D222ED213000AACB34 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81D122ED213000AACB34 /* AlbumTableViewCell.swift */; };
+		01DA81D422ED265D00AACB34 /* ViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81D322ED265D00AACB34 /* ViewExtention.swift */; };
+		01DA81D622ED267700AACB34 /* ViewExtentionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81D522ED267700AACB34 /* ViewExtentionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		01DA81CB22ED1A6700AACB34 /* AlbumListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListTableViewController.swift; sourceTree = "<group>"; };
 		01DA81CD22ED1C9C00AACB34 /* MainNavigatonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainNavigatonController.swift; path = Top100/MainNavigatonController.swift; sourceTree = SOURCE_ROOT; };
 		01DA81D122ED213000AACB34 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		01DA81D322ED265D00AACB34 /* ViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtention.swift; sourceTree = "<group>"; };
+		01DA81D522ED267700AACB34 /* ViewExtentionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtentionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 		01DA81CA22ED19EB00AACB34 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				01DA81D322ED265D00AACB34 /* ViewExtention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 		01DA81CF22ED1E5700AACB34 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				01DA81D522ED267700AACB34 /* ViewExtentionProtocol.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -267,6 +273,8 @@
 				01DA81A622ED111600AACB34 /* AppDelegate.swift in Sources */,
 				01DA81CC22ED1A6700AACB34 /* AlbumListTableViewController.swift in Sources */,
 				01DA81D222ED213000AACB34 /* AlbumTableViewCell.swift in Sources */,
+				01DA81D422ED265D00AACB34 /* ViewExtention.swift in Sources */,
+				01DA81D622ED267700AACB34 /* ViewExtentionProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

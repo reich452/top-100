@@ -11,8 +11,6 @@ import UIKit
 
 class AlbumTableViewCell: UITableViewCell {
     
-    
-    
     // MARK: - Initailzer
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -22,6 +20,4 @@ class AlbumTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-   
 }
