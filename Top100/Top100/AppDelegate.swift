@@ -20,13 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let urlCache = URLCache(memoryCapacity: 25_000_000, diskCapacity: 50_000_000, diskPath: temporaryDirectory)
         URLCache.shared = urlCache
         
-        let mainNavController = MainNavigationController()
         let albumController = AlbumController()
         let albumListTVC = AlbumListTableViewController(albumController: albumController)
-        mainNavController.viewControllers = [albumListTVC]
+        let mainNav = UINavigationController(rootViewController: albumListTVC)
+        mainNav.navigationBar.prefersLargeTitles = true
+        
         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = mainNav
         window?.makeKeyAndVisible()
-        window?.rootViewController = mainNavController
+        mainNav.viewControllers = [albumListTVC]
         
         return true
     }

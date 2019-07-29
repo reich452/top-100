@@ -27,7 +27,7 @@ class AlbumTableViewCell: UITableViewCell {
     
     // MARK: - Private
     
-    private let artworkImageView: UIImageView = {
+    let artworkImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 20
@@ -69,9 +69,11 @@ class AlbumTableViewCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.spacing = 7
         addSubview(stackView)
+
         stackView.anchorWith(top: artworkImageView.topAnchor, paddingTop: 32, bottom: nil, paddingBottom: 0, left: artworkImageView.rightAnchor, paddingLeft: 15, right: rightAnchor, paddingRight: 15, width: 0, greaterHeight: 55)
         
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

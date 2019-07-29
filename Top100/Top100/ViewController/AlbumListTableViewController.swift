@@ -13,17 +13,21 @@ class AlbumListTableViewController: UITableViewController {
     // MARK: - Properties
     let albumController: AlbumController
     fileprivate var albums = [Album]()
-    
+    private let albumDetailVC = AlbumDetailViewController()
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: Constant.albumCellId)
-        tableView.prefetchDataSource = self 
+        tableView.prefetchDataSource = self
+        
         setUpUi()
         fetchAlbums()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     // MARK: - UI
     
@@ -42,7 +46,7 @@ class AlbumListTableViewController: UITableViewController {
                 self.albums = albums
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                      UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 }
                 
             case .failure(let error):
@@ -84,6 +88,22 @@ extension AlbumListTableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      
+        guard let cell = tableView.cellForRow(at: indexPath) as? AlbumTableViewCell else { return }
+        
+        let album = self.albums[indexPath.row]
+        let albumDetailVC = AlbumDetailViewController()
+        albumDetailVC.album = album
+        albumDetailVC.artworkImage = cell.artworkImageView.image
+        navigationController?.pushViewController(albumDetailVC, animated: true)
+    }
+    
+    
+    @objc func goToDetailVC() {
+        let albumDetailVC = AlbumDetailViewController()
+        navigationController?.pushViewController(albumDetailVC, animated: true)
+    }
 }
 
 extension AlbumListTableViewController: UITableViewDataSourcePrefetching {
