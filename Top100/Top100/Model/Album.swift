@@ -9,13 +9,14 @@
 import Foundation
 
 protocol Album {
-    var name: String { get set }
-    var artist: String { get set }
-    var artworkUrl: String { get set }
-    var copyright: String { get set }
-    var artistId: String { get set }
-    var urlLink: URL { get set }
-    var releaseDate: String { get set }
-    var genres: [GenreDeictionary] { get set }
+    var name: String { get }
+    var artist: String { get }
+    var artworkUrl: String { get }
+    var copyright: String { get }
+    var artistId: String { get }
+    var urlLink: URL { get }
+    var releaseDate: String { get }
+    var genres: [GenreDeictionary] { get }
     var hdArtworkString: String { get }
+    var id: String { get }
 }

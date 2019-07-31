@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class AlbumDetailViewController: UIViewController {
     
@@ -65,9 +66,7 @@ class AlbumDetailViewController: UIViewController {
     // MARK: - Actions
 
     @objc func viewAlbumBtnTapped() {
-        let albumWebView = AlbumWebViewController()
-        albumWebView.urlStr = album!.urlLink
-        navigationController?.pushViewController(albumWebView, animated: true)
+        openItunesWith(identifier: album?.id ?? "563355119")
     }
     
     // MARK: - Properties
@@ -126,4 +125,31 @@ class AlbumDetailViewController: UIViewController {
         btn.backgroundColor = .mainPurple
         return btn
     }()
+}
+
+extension AlbumDetailViewController: SKStoreProductViewControllerDelegate {
+    
+    func openItunesWith(identifier: String) {
+        let storeViewController = SKStoreProductViewController()
+        storeViewController.delegate = self
+
+        let parameters = [ SKStoreProductParameterITunesItemIdentifier : identifier]
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        storeViewController.loadProduct(withParameters: parameters) { [weak self] (loaded, error) -> Void in
+            if let error = error {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                print("Error loading SKStore \(error.localizedDescription)")
+                self?.showNoActionAlert(titleStr: "Error Loading iTunes", messageStr: error.localizedDescription, style: .cancel)
+            }
+            if loaded {
+                self?.present(storeViewController, animated: true, completion: {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                })
+            }
+        }
+    }
+
+    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
 }

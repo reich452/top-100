@@ -28,6 +28,7 @@ struct AlbumModel: Decodable, Album {
     var urlLink: URL
     var releaseDate: String
     var genres: [GenreDeictionary]
+    var id: String
     
     var hdArtworkString: String {
         let urlString = artworkUrl
@@ -44,6 +45,7 @@ struct AlbumModel: Decodable, Album {
         case urlLink = "url"
         case releaseDate
         case genres
+        case id
     }
 }
 
