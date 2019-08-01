@@ -25,7 +25,6 @@
 		01DA81E622ED482B00AACB34 /* ViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81E522ED482B00AACB34 /* ViewController+Extention.swift */; };
 		01DA81E822ED4BC200AACB34 /* ImageView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81E722ED4BC200AACB34 /* ImageView+Extention.swift */; };
 		01DA81EC22EF426600AACB34 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81EB22EF426600AACB34 /* AlbumDetailViewController.swift */; };
-		01DA81EE22EF5D0F00AACB34 /* AlbumWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DA81ED22EF5D0F00AACB34 /* AlbumWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +60,6 @@
 		01DA81E522ED482B00AACB34 /* ViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extention.swift"; sourceTree = "<group>"; };
 		01DA81E722ED4BC200AACB34 /* ImageView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extention.swift"; sourceTree = "<group>"; };
 		01DA81EB22EF426600AACB34 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
-		01DA81ED22EF5D0F00AACB34 /* AlbumWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 				01DA81CA22ED19EB00AACB34 /* Extentions */,
 				01DA81C922ED19AA00AACB34 /* Networking */,
 				01DA81C822ED197B00AACB34 /* ViewController */,
-				01DA81C722ED195600AACB34 /* View */,
 				01DA81D022ED20F800AACB34 /* Cell */,
 				01DA81C622ED194000AACB34 /* ModelController */,
 				01DA81C522ED18F200AACB34 /* Model */,
@@ -145,19 +142,11 @@
 			path = ModelController;
 			sourceTree = "<group>";
 		};
-		01DA81C722ED195600AACB34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		01DA81C822ED197B00AACB34 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				01DA81CB22ED1A6700AACB34 /* AlbumListTableViewController.swift */,
 				01DA81EB22EF426600AACB34 /* AlbumDetailViewController.swift */,
-				01DA81ED22EF5D0F00AACB34 /* AlbumWebViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -304,7 +293,6 @@
 				01DA81A622ED111600AACB34 /* AppDelegate.swift in Sources */,
 				01DA81D822ED278900AACB34 /* ColorTheme.swift in Sources */,
 				01DA81E422ED3F9200AACB34 /* NetworkError.swift in Sources */,
-				01DA81EE22EF5D0F00AACB34 /* AlbumWebViewController.swift in Sources */,
 				01DA81CC22ED1A6700AACB34 /* AlbumListTableViewController.swift in Sources */,
 				01DA81E822ED4BC200AACB34 /* ImageView+Extention.swift in Sources */,
 				01DA81DC22ED29B900AACB34 /* AlbumModel.swift in Sources */,
