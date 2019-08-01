@@ -66,7 +66,13 @@ class AlbumDetailViewController: UIViewController {
     // MARK: - Actions
 
     @objc func viewAlbumBtnTapped() {
+        
+        #if targetEnvironment(simulator)
+        showNoActionAlert(titleStr: "Ops. No Device", messageStr: "This is a simulator not a device. Can't open album id \(album?.id ?? "") in iTunes", style: .cancel)
+        #else
         openItunesWith(identifier: album?.id ?? "563355119")
+
+        #endif
     }
     
     // MARK: - Properties
